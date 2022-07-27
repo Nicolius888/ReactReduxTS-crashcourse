@@ -1,17 +1,17 @@
-const initialState = 0; 
- 
+import {ActionType} from "../action-types";
+
 interface DepostiAction{
-    type: "deposit"
+    type: ActionType.DEPOSIT,
     payload: number
 }
 
 interface WithdrawAction {
-    type: "withdraw"
+    type: ActionType.WITHDRAW,
     payload: number
 }
 
 interface  BankruptAction {
-    type: "bankrupt"
+    type: ActionType.BANKRUPT
 }
 
 export type Action = DepostiAction | WithdrawAction | BankruptAction
