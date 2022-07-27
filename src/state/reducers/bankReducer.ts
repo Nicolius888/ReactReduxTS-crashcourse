@@ -1,20 +1,6 @@
-const initialState = 0; 
- 
-interface DepostiAction{
-    type: "deposit"
-    payload: number
-}
+import { Action } from "../actions";
 
-interface WithdrawAction {
-    type: "withdraw"
-    payload: number
-}
-
-interface  BankruptAction {
-    type: "bankrupt"
-}
-
-type Action = DepostiAction | WithdrawAction | BankruptAction
+const initialState = 0;
 
  const reducer = (state: number = initialState , action: Action) => {
     switch (action.type){
